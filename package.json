@@ -1,0 +1,24 @@
+{
+  "name": "vp-blog",
+  "version": "1.0.0",
+  "description": "Visual Phixation blog",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/visualphixation/vp-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/visualphixation/vp-blog/issues"
+  },
+  "homepage": "https://github.com/visualphixation/vp-blog#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.1"
+  }
+}
