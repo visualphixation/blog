@@ -1,6 +1,11 @@
 body {
   font-family: sans-serif;
-  color: hsl(170deg, 50%, 45%);
+  color: hsl(210deg, 60%, 45%);
+}
+
+.date {
+  font-size: 1rem;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=style.css.map */
