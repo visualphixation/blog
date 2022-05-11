@@ -1,0 +1,17 @@
+nav {
+  align-self: flex-end;
+}
+
+.navigation-menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  padding: 0.5rem;
+  background: hsl(191, 5%, 50%, 0.8);
+
+  > li {
+    padding: 1rem;
+  }
+}

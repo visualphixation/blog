@@ -9,7 +9,10 @@
   <body>
     <a class="visually-hidden" href="#main-content">Skip to main content</a>
     <header>
-      {% include 'header.njk' %}
+      <div class="logo">
+        {% include 'logo.njk' %}
+      </div>
+      {% include 'navigation.njk' %}
     </header>
     <main id="main-content">
       <h1>{{ title }}</h1>

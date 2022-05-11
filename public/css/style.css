@@ -109,6 +109,15 @@ h6 {
   margin: 1em;
 }
 
+/* Border Effect */
+.border-effect {
+  padding: 1rem;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+
 /* 
     Fluid Type Scale
 
@@ -139,32 +148,32 @@ h6,
 
 h1,
 .h1 {
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 h2,
 .h2 {
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 h3,
 .h3 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 h4,
 .h4 {
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 h5,
 .h5 {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 
 h6,
 .h6 {
-  font-size: 0.5rem;
+  font-size: 0.75rem;
 }
 
 .fluid {
@@ -198,28 +207,49 @@ h6,
 }
 
 body {
-  background: hsl(216deg, 96%, 10%);
+  background-image: linear-gradient(45deg, hsl(217deg, 86%, 36%) 0%, hsl(233deg, 86%, 37%) 9%, hsl(249deg, 87%, 38%) 18%, hsl(266deg, 88%, 40%) 27%, hsl(282deg, 89%, 41%) 36%, hsl(298deg, 89%, 42%) 45%, hsl(314deg, 90%, 44%) 55%, hsl(330deg, 90%, 45%) 64%, hsl(347deg, 91%, 46%) 73%, hsl(3deg, 92%, 47%) 82%, hsl(19deg, 92%, 49%) 91%, hsl(35deg, 93%, 50%) 100%);
 }
 
 header {
-  background: rgb(0, 212, 255);
-  background: linear-gradient(0deg, rgb(0, 212, 255) 0%, rgba(9, 9, 121, 0.8588119369) 85%, rgb(9, 9, 121) 100%);
+  background: hsla(216deg, 96%, 10%, 0.2);
   padding: 2rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 main {
-  background: hsl(191deg, 5%, 50%);
+  background: hsla(191deg, 5%, 50%, 0.8);
   padding: 2rem;
 }
 
 footer {
-  background: hsl(244deg, 48%, 50%);
+  background: hsla(244deg, 48%, 50%, 0.8);
   padding: 2rem;
 }
 
-aside {
-  background: hsl(157deg, 26%, 50%);
+.random-post {
+  background: hsla(157deg, 26%, 50%, 0.8);
   padding: 2rem;
+  border: 2px solid #339922;
+}
+
+nav {
+  align-self: flex-end;
+}
+
+.navigation-menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  padding: 0.5rem;
+  background: hsla(191deg, 5%, 50%, 0.8);
+}
+.navigation-menu > li {
+  padding: 1rem;
 }
 
 .date {
