@@ -11,7 +11,8 @@ eleventyNavigation:
   {% for post in collections.posts %}
   <li>
     <a href="{{ post.url }}">
-      <span>{{ post.data.date }}</span> | <span>{{ post.data.title }}</span></a>
+      <span>{{ post.data.date }}</span> | <span>{{ post.data.title }}</span>
+    </a>
   </li>
   {% endfor %}
 </ul>

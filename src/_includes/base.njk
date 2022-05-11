@@ -2,18 +2,22 @@
 <html lang="eng">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-scale=1.0>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
     <title>{{ title }}</title>
   </head>
   <body>
+    <a class="visually-hidden" href="#main-content">Skip to main content</a>
     <header>
-      {% include 'navigation.njk' %}
+      {% include 'header.njk' %}
     </header>
-    <main>
+    <main id="main-content">
       <h1>{{ title }}</h1>
       {{ content | safe }}
     </main>
+    <aside class="random-post">
+      {% include 'random-post.njk' %}
+    </aside>
     {% include 'footer.njk' %}
   </body>
 </html>

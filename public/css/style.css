@@ -1,6 +1,225 @@
+/*
+  https://www.joshwcomeau.com/css/custom-css-reset/
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
 body {
-  font-family: sans-serif;
-  color: hsl(210deg, 60%, 45%);
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* 
+    Center vertically
+
+    Pass nothing, simply include.layout
+
+    Usage:
+
+    .box {
+        @include center-vertically;
+    }
+*/
+.content {
+  background: rgb(0, 132, 186);
+  background: linear-gradient(122deg, rgb(0, 132, 186) 0%, rgb(255, 255, 255) 100%);
+}
+
+.content {
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+.grid-columns {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  gap: 1em;
+  background: #449933;
+  height: 100vh;
+}
+
+.content {
+  padding: 1em;
+  margin: 1em;
+}
+
+/* 
+    Fluid Type Scale
+
+    Learn more about what's going on here:
+    @link https://moderncss.dev/generating-font-size-css-rules-and-creating-a-fluid-type-scale/
+
+    Select a ratio to preview
+    Default is "perfectFourth"
+*/
+body {
+  font-family: "Atkinson-Regular", sans-serif;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: "Atkinson-Bold", sans-serif;
+}
+
+h1,
+.h1 {
+  font-size: 4rem;
+}
+
+h2,
+.h2 {
+  font-size: 3rem;
+}
+
+h3,
+.h3 {
+  font-size: 2rem;
+}
+
+h4,
+.h4 {
+  font-size: 1rem;
+}
+
+h5,
+.h5 {
+  font-size: 0.75rem;
+}
+
+h6,
+.h6 {
+  font-size: 0.5rem;
+}
+
+.fluid {
+  font-size: clamp(1rem, 2vw + 1rem, 2.25rem);
+}
+
+@font-face {
+  font-family: "Atkinson-Regular";
+  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.svg#Atkinson-Regular") format("svg");
+}
+@font-face {
+  font-family: "Atkinson-Bold";
+  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.svg#Atkinson-Bold") format("svg");
+}
+@font-face {
+  font-family: "Atkinson-BoldItalic";
+  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.svg#Atkinson-BoldItalic") format("svg");
+}
+@font-face {
+  font-family: "Atkinson-Italic";
+  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.svg#Atkinson-Italic") format("svg");
+}
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+body {
+  background: hsl(216deg, 96%, 10%);
+}
+
+header {
+  background: rgb(0, 212, 255);
+  background: linear-gradient(0deg, rgb(0, 212, 255) 0%, rgba(9, 9, 121, 0.8588119369) 85%, rgb(9, 9, 121) 100%);
+  padding: 2rem;
+}
+
+main {
+  background: hsl(191deg, 5%, 50%);
+  padding: 2rem;
+}
+
+footer {
+  background: hsl(244deg, 48%, 50%);
+  padding: 2rem;
+}
+
+aside {
+  background: hsl(157deg, 26%, 50%);
+  padding: 2rem;
 }
 
 .date {

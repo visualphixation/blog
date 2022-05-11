@@ -1,5 +1,4 @@
-<navigation>
-  {% include 'logo.njk' %}
+<nav>
   {% set navPages = collections.all | eleventyNavigation %}
   <ul>
   {%- for entry in navPages %}
@@ -8,4 +7,4 @@
     </li>
   {%- endfor %}
   </ul>
-</navigation>
+</nav>

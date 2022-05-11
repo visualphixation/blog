@@ -1,7 +1,10 @@
-body {
-  font-family: sans-serif;
-  color: hsla(210, 60%, 45%, 1);
-}
+@use "./utilities/reset";
+@use "./mixins/mixins" as mixin;
+@use "./utilities/grid" as grid;
+@use "./base/typography" as typgrophy;
+@use "./base/fonts" as fonts;
+@use "./utilities/inclusively-hide";
+@use "./layout/layout";
 
 .date {
   font-size: 1rem;

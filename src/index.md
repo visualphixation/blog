@@ -1,8 +1,13 @@
 ---
-title: "I pity the foo"
+title: "This is the most important heading"
 layout: "base.njk"
 eleventyNavigation:
   key: Home
+templateEngineOverride: njk,md
 ---
 
-## This is a home page.
+## Welcome to the homepage
+
+This is the main content section of the homepage.
+
+This should be all content, use nunjucks templates for more declaritive layout structure.

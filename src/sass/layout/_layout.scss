@@ -1,0 +1,24 @@
+body {
+  background: hsl(216, 96%, 10%);
+}
+
+header {
+  background: rgb(0, 212, 255);
+  background: linear-gradient(0deg, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 0.8588119369369369) 85%, rgba(9, 9, 121, 1) 100%);
+  padding: 2rem;
+}
+
+main {
+  background: hsl(191, 5%, 50%);
+  padding: 2rem;
+}
+
+footer {
+  background: hsl(244, 48%, 50%);
+  padding: 2rem;
+}
+
+aside {
+  background: hsl(157, 26%, 50%);
+  padding: 2rem;
+}
