@@ -1,0 +1,13 @@
+/*
+  Links
+*/
+@use "../config";
+
+a,
+a.link {
+  @include config.linx(config.$link-base, config.$visited, config.$hover, config.$active, config.$focus);
+
+  &--active {
+    color: config.$active !important;
+  }
+}
