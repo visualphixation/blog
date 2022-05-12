@@ -3,18 +3,11 @@
 */
 @use "../config";
 
-a {
-  color: config.$link-base;
-  &:visited {
-    color: config.$visited;
-  }
-  &:hover {
-    color: config.$hover;
-  }
-  &:active {
-    color: config.$active;
-  }
-  &:focus {
-    color: config.$focus;
+a,
+a.link {
+  @include config.linx(config.$link-base, config.$visited, config.$hover, config.$active, config.$focus);
+
+  &--active {
+    color: config.$active !important;
   }
 }

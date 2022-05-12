@@ -154,6 +154,10 @@ h6,
   font-size: clamp(1rem, 2vw + 1rem, 2.25rem);
 }
 
+/* palette generators: 
+  https://mycolor.space/?hex=%233A6292&sub=1 
+  http://paletton.com/
+*/
 /* 
     Center vertically
 
@@ -232,12 +236,16 @@ h6,
   https://www.joshwcomeau.com/css/designing-shadows/
 */
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-image: linear-gradient(45deg, hsl(217deg, 86%, 36%) 0%, hsl(233deg, 86%, 37%) 9%, hsl(249deg, 87%, 38%) 18%, hsl(266deg, 88%, 40%) 27%, hsl(282deg, 89%, 41%) 36%, hsl(298deg, 89%, 42%) 45%, hsl(314deg, 90%, 44%) 55%, hsl(330deg, 90%, 45%) 64%, hsl(347deg, 91%, 46%) 73%, hsl(3deg, 92%, 47%) 82%, hsl(19deg, 92%, 49%) 91%, hsl(35deg, 93%, 50%) 100%);
 }
 
 header {
   background: hsl(213deg, 43%, 40%);
   padding: 2rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -245,38 +253,66 @@ header {
 }
 
 main {
+  flex-grow: 1;
   background: hsla(191deg, 5%, 50%, 0.8);
   padding: 2rem;
+  margin: 4rem;
 }
 
 footer {
+  display: flex;
+  justify-content: space-between;
   background: hsla(244deg, 48%, 50%, 0.8);
   padding: 2rem;
+}
+
+.content-related {
+  position: fixed;
+  right: 0;
+  top: 15rem;
 }
 
 .random-post {
   background: hsla(157deg, 26%, 50%, 0.8);
   padding: 2rem;
   border: 2px solid #339922;
+  margin: 1rem;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+.random-post h2 {
+  font-size: 2rem;
 }
 
 /*
   Links
 */
-a {
-  color: hsl(36deg, 100%, 50%);
+a,
+a.link {
+  color: hsl(164deg, 49%, 38%);
 }
-a:visited {
-  color: #995c00;
+a:visited,
+a.link:visited {
+  color: #174438;
+  font-weight: 700;
 }
-a:hover {
-  color: #ffc266;
+a:hover,
+a.link:hover {
+  color: #5fc8ac;
+  font-weight: 700;
 }
-a:active {
-  color: #ffee00;
+a:active,
+a.link:active {
+  color: #318a90;
+  font-weight: 700;
 }
-a:focus {
-  color: #ffc266;
+a:focus,
+a.link:focus {
+  color: #5fc8ac;
+  font-weight: 700;
+}
+a--active,
+a.link--active {
+  color: #318a90 !important;
 }
 
 nav {
@@ -284,23 +320,15 @@ nav {
 }
 
 .navigation-menu {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   list-style: none;
   padding: 0.5rem;
   background: hsla(191deg, 5%, 50%, 0.8);
 }
-
-.navigation-menu-item {
+.navigation-menu .navigation-menu-item {
   padding: 1rem;
-}
-.navigation-menu-item a {
-  color: hsl(35deg, 93%, 50%);
-}
-.navigation-menu-item.--active a {
-  color: hsl(135deg, 93%, 50%);
 }
 
 .date {

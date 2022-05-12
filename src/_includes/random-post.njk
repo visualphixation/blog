@@ -1,5 +1,5 @@
-<div class="border-effect">
-  <h2>From the blog</h2>
+<div class="random-post border-effect">
+  <h2>Random Post</h2>
   {% for post in collections.posts | randomPost %}
   <a href="{{ post.url }}">
   <span>{{ post.data.date }}</span> | <span>{{ post.data.title }}</span>
