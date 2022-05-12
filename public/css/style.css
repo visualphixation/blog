@@ -76,48 +76,22 @@ h6 {
   isolation: isolate;
 }
 
-/* 
-    Center vertically
-
-    Pass nothing, simply include.layout
-
-    Usage:
-
-    .box {
-        @include center-vertically;
-    }
-*/
-.content {
-  background: rgb(0, 132, 186);
-  background: linear-gradient(122deg, rgb(0, 132, 186) 0%, rgb(255, 255, 255) 100%);
+@font-face {
+  font-family: "Atkinson-Regular";
+  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.svg#Atkinson-Regular") format("svg");
 }
-
-.content {
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+@font-face {
+  font-family: "Atkinson-Bold";
+  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.svg#Atkinson-Bold") format("svg");
 }
-
-.grid-columns {
-  display: grid;
-  grid-template-columns: repeat(var(--cols), 1fr);
-  gap: 1em;
-  background: #449933;
-  height: 100vh;
+@font-face {
+  font-family: "Atkinson-BoldItalic";
+  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.svg#Atkinson-BoldItalic") format("svg");
 }
-
-.content {
-  padding: 1em;
-  margin: 1em;
+@font-face {
+  font-family: "Atkinson-Italic";
+  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.svg#Atkinson-Italic") format("svg");
 }
-
-/* Border Effect */
-.border-effect {
-  padding: 1rem;
-  border: 10px solid;
-  border-image-slice: 1;
-  border-width: 5px;
-  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
-}
-
 /* 
     Fluid Type Scale
 
@@ -180,22 +154,67 @@ h6,
   font-size: clamp(1rem, 2vw + 1rem, 2.25rem);
 }
 
-@font-face {
-  font-family: "Atkinson-Regular";
-  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.svg#Atkinson-Regular") format("svg");
+/* 
+    Center vertically
+
+    Pass nothing, simply include.layout
+
+    Usage:
+
+    .box {
+        @include center-vertically;
+    }
+*/
+/* Border Effect */
+.border-effect {
+  padding: 1rem;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
 }
-@font-face {
-  font-family: "Atkinson-Bold";
-  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.svg#Atkinson-Bold") format("svg");
+
+/* 
+
+  https://www.sarasoueidan.com/blog/focus-indicators/
+
+  https://github.com/WICG/focus-visible
+
+*/
+:focus-visible {
+  /* Default. Will be removed in Forced Color Modes */
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.1);
+  /* Fallback. Will be visible with custom system colors in Forced Color Modes */
+  outline: 1px solid hsl(38deg, 100%, 50%);
+  padding: 0.4rem;
+  transition: all 0.2s ease;
+  transform: rotate(360deg);
+  background: hsl(200deg, 100%, 50%);
+  color: white;
 }
-@font-face {
-  font-family: "Atkinson-BoldItalic";
-  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.svg#Atkinson-BoldItalic") format("svg");
+
+.content {
+  background: rgb(0, 132, 186);
+  background: linear-gradient(122deg, rgb(0, 132, 186) 0%, rgb(255, 255, 255) 100%);
 }
-@font-face {
-  font-family: "Atkinson-Italic";
-  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.svg#Atkinson-Italic") format("svg");
+
+.content {
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
 }
+
+.grid-columns {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  gap: 1em;
+  background: #449933;
+  height: 100vh;
+}
+
+.content {
+  padding: 1em;
+  margin: 1em;
+}
+
 .visually-hidden:not(:focus):not(:active) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -206,12 +225,18 @@ h6,
   width: 1px;
 }
 
+/* 
+  Shadows
+
+  Look at Josh Comeau shadowy things
+  https://www.joshwcomeau.com/css/designing-shadows/
+*/
 body {
   background-image: linear-gradient(45deg, hsl(217deg, 86%, 36%) 0%, hsl(233deg, 86%, 37%) 9%, hsl(249deg, 87%, 38%) 18%, hsl(266deg, 88%, 40%) 27%, hsl(282deg, 89%, 41%) 36%, hsl(298deg, 89%, 42%) 45%, hsl(314deg, 90%, 44%) 55%, hsl(330deg, 90%, 45%) 64%, hsl(347deg, 91%, 46%) 73%, hsl(3deg, 92%, 47%) 82%, hsl(19deg, 92%, 49%) 91%, hsl(35deg, 93%, 50%) 100%);
 }
 
 header {
-  background: hsla(216deg, 96%, 10%, 0.2);
+  background: hsl(213deg, 43%, 40%);
   padding: 2rem;
   display: flex;
   flex-flow: row nowrap;
@@ -235,6 +260,25 @@ footer {
   border: 2px solid #339922;
 }
 
+/*
+  Links
+*/
+a {
+  color: hsl(36deg, 100%, 50%);
+}
+a:visited {
+  color: #995c00;
+}
+a:hover {
+  color: #ffc266;
+}
+a:active {
+  color: #ffee00;
+}
+a:focus {
+  color: #ffc266;
+}
+
 nav {
   align-self: flex-end;
 }
@@ -248,8 +292,15 @@ nav {
   padding: 0.5rem;
   background: hsla(191deg, 5%, 50%, 0.8);
 }
-.navigation-menu > li {
+
+.navigation-menu-item {
   padding: 1rem;
+}
+.navigation-menu-item a {
+  color: hsl(35deg, 93%, 50%);
+}
+.navigation-menu-item.--active a {
+  color: hsl(135deg, 93%, 50%);
 }
 
 .date {

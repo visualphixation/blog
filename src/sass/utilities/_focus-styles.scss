@@ -6,9 +6,14 @@
 
 */
 
-button:focus-visible {
+:focus-visible {
   /* Default. Will be removed in Forced Color Modes */
   box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.1);
   /* Fallback. Will be visible with custom system colors in Forced Color Modes */
-  outline: 1px solid transparent;
+  outline: 1px solid hsla(38, 100%, 50%, 1);
+  padding: 0.4rem;
+  transition: all 0.2s ease;
+  transform: rotate(360deg);
+  background: hsla(200, 100%, 50%, 1);
+  color: white;
 }

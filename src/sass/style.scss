@@ -1,11 +1,5 @@
-@use "./utilities/reset";
-@use "./mixins/mixins" as mixin;
-@use "./utilities/grid" as grid;
-@use "./utilities/border-effects";
-@use "./base/typography" as typgrophy;
-@use "./base/fonts" as fonts;
-@use "./utilities/inclusively-hide";
 @use "./layout/layout";
+@use "./components/links";
 @use "./components/navigation-main";
 
 .date {

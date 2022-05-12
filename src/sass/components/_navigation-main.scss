@@ -10,8 +10,18 @@ nav {
   list-style: none;
   padding: 0.5rem;
   background: hsl(191, 5%, 50%, 0.8);
+}
 
-  > li {
-    padding: 1rem;
+.navigation-menu-item {
+  padding: 1rem;
+
+  a {
+    color: hsl(35, 93%, 50%, 1);
+  }
+
+  &.--active {
+    a {
+      color: hsl(135, 93%, 50%, 1);
+    }
   }
 }

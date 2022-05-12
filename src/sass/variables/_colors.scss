@@ -1,0 +1,16 @@
+$white: #ffffff;
+$black: #000000;
+$dkGray: #303030;
+$ltGray: #cecece;
+
+// Brand Colors
+$brand: hsla(213, 43%, 40%, 1); //#3a6292
+$brand-highlight: hsla(44.72, 93.81%, 44.31%, 1);
+$brand-complementary: hsla(32.73, 27.5%, 31.3%, 1);
+
+// Link colors
+$link-base: hsla(36, 100%, 50%, 1);
+$visited: darken($link-base, 20%);
+$hover: lighten($link-base, 20%);
+$active: adjust-hue($link-base, 20deg);
+$focus: lighten($link-base, 20%);

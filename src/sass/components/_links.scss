@@ -1,0 +1,20 @@
+/*
+  Links
+*/
+@use "../config";
+
+a {
+  color: config.$link-base;
+  &:visited {
+    color: config.$visited;
+  }
+  &:hover {
+    color: config.$hover;
+  }
+  &:active {
+    color: config.$active;
+  }
+  &:focus {
+    color: config.$focus;
+  }
+}
