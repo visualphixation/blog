@@ -1,0 +1,17 @@
+/* 
+    Center vertically
+
+    Pass nothing, simply include.layout
+
+    Usage:
+
+    .box {
+        @include center-vertically;
+    }
+*/
+@mixin center-vertically {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

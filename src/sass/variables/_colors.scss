@@ -1,0 +1,47 @@
+$white: #ffffff;
+$black: #000000;
+$gray-dark: #303030;
+$gray-light: #cecece;
+
+/* palette generators: 
+  https://mycolor.space/?hex=%233A6292&sub=1 
+  http://paletton.com/
+*/
+
+// Brand Colors
+$brand-primary-0: hsla(213, 43%, 40%, 1); // #3a6292; // Brand Primary color */
+$brand-primary-1: hsla(213, 38%, 66%, 1); // #88a6ca;
+$brand-primary-2: hsla(212, 31%, 50%, 1); // #577ca7;
+$brand-primary-3: hsla(213, 59%, 32%, 1); // #224e83;
+$brand-primary-4: hsla(213, 69%, 24%, 1); // #133967;
+
+$brand-secondary-0: hsla(246, 40%, 44%, 1); // #4c439b;
+$brand-secondary-1: hsla(247, 41%, 69%, 1); // #9790d0;
+$brand-secondary-2: hsla(247, 34%, 54%, 1); // #6a61b2;
+$brand-secondary-3: hsla(246, 54%, 35%, 1); // #342a8b;
+$brand-secondary-4: hsla(246, 63%, 26%, 1); // #22196d;
+
+$brand-tertiary-0: hsla(164, 49%, 38%, 1); // #329278;
+$brand-tertiary-1: hsla(163, 40%, 65%, 1); // #83cab6;
+$brand-tertiary-2: hsla(163, 35%, 49%, 1); // #50a88f;
+$brand-tertiary-3: hsla(164, 68%, 31%, 1); // #198366;
+$brand-tertiary-4: hsla(163, 81%, 22%, 1); // #0b674d;
+
+$brand-accent-1: hsla(47, 70%, 59%, 1); // #dfbf4d;
+$brand-accent-2: hsla(47, 100%, 82%, 1); // #ffeba5;
+$brand-accent-3: hsla(47, 100%, 74%, 1); //#ffe27a;
+$brand-accent-4: hsla(47, 67%, 47%, 1); // #c8a427;
+$brand-accent-5: hsla(47, 80%, 34%, 1); // #9d7e11;
+
+$brand-contrast-0: hsla(21, 70%, 59%, 1); // #df814d;
+$brand-contrast-1: hsla(21, 100%, 82%, 1); // #ffc5a5;
+$brand-contrast-2: hsla(22, 100%, 74%, 1); // #ffaa7a;
+$brand-contrast-3: hsla(22, 67%, 47%, 1); // #c86127;
+$brand-contrast-4: hsla(21, 80%, 34%, 1); // #9d4311;
+
+// Link colors
+$link-base: $brand-tertiary-0;
+$visited: darken($link-base, 20%);
+$hover: lighten($link-base, 20%);
+$active: adjust-hue($link-base, 20deg);
+$focus: lighten($link-base, 20%);

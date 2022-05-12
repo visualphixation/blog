@@ -1,6 +1,334 @@
+/*
+  https://www.joshwcomeau.com/css/custom-css-reset/
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
 body {
-  font-family: sans-serif;
-  color: hsl(210deg, 60%, 45%);
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+@font-face {
+  font-family: "Atkinson-Regular";
+  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.svg#Atkinson-Regular") format("svg");
+}
+@font-face {
+  font-family: "Atkinson-Bold";
+  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.svg#Atkinson-Bold") format("svg");
+}
+@font-face {
+  font-family: "Atkinson-BoldItalic";
+  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.svg#Atkinson-BoldItalic") format("svg");
+}
+@font-face {
+  font-family: "Atkinson-Italic";
+  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.svg#Atkinson-Italic") format("svg");
+}
+/* 
+    Fluid Type Scale
+
+    Learn more about what's going on here:
+    @link https://moderncss.dev/generating-font-size-css-rules-and-creating-a-fluid-type-scale/
+
+    Select a ratio to preview
+    Default is "perfectFourth"
+*/
+body {
+  font-family: "Atkinson-Regular", sans-serif;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: "Atkinson-Bold", sans-serif;
+}
+
+h1,
+.h1 {
+  font-size: 5rem;
+}
+
+h2,
+.h2 {
+  font-size: 4rem;
+}
+
+h3,
+.h3 {
+  font-size: 3rem;
+}
+
+h4,
+.h4 {
+  font-size: 2rem;
+}
+
+h5,
+.h5 {
+  font-size: 1rem;
+}
+
+h6,
+.h6 {
+  font-size: 0.75rem;
+}
+
+.fluid {
+  font-size: clamp(1rem, 2vw + 1rem, 2.25rem);
+}
+
+/* palette generators: 
+  https://mycolor.space/?hex=%233A6292&sub=1 
+  http://paletton.com/
+*/
+/* 
+    Center vertically
+
+    Pass nothing, simply include.layout
+
+    Usage:
+
+    .box {
+        @include center-vertically;
+    }
+*/
+/* Border Effect */
+.border-effect {
+  padding: 1rem;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+
+/* 
+
+  https://www.sarasoueidan.com/blog/focus-indicators/
+
+  https://github.com/WICG/focus-visible
+
+*/
+:focus-visible {
+  /* Default. Will be removed in Forced Color Modes */
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.1);
+  /* Fallback. Will be visible with custom system colors in Forced Color Modes */
+  outline: 1px solid hsl(38deg, 100%, 50%);
+  padding: 0.4rem;
+  transition: all 0.2s ease;
+  transform: rotate(360deg);
+  background: hsl(200deg, 100%, 50%);
+  color: white;
+}
+
+.content {
+  background: rgb(0, 132, 186);
+  background: linear-gradient(122deg, rgb(0, 132, 186) 0%, rgb(255, 255, 255) 100%);
+}
+
+.content {
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+.grid-columns {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  gap: 1em;
+  background: #449933;
+  height: 100vh;
+}
+
+.content {
+  padding: 1em;
+  margin: 1em;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* 
+  Shadows
+
+  Look at Josh Comeau shadowy things
+  https://www.joshwcomeau.com/css/designing-shadows/
+*/
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(45deg, hsl(217deg, 86%, 36%) 0%, hsl(233deg, 86%, 37%) 9%, hsl(249deg, 87%, 38%) 18%, hsl(266deg, 88%, 40%) 27%, hsl(282deg, 89%, 41%) 36%, hsl(298deg, 89%, 42%) 45%, hsl(314deg, 90%, 44%) 55%, hsl(330deg, 90%, 45%) 64%, hsl(347deg, 91%, 46%) 73%, hsl(3deg, 92%, 47%) 82%, hsl(19deg, 92%, 49%) 91%, hsl(35deg, 93%, 50%) 100%);
+}
+
+header {
+  background: hsl(213deg, 43%, 40%);
+  padding: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main {
+  flex-grow: 1;
+  background: hsla(191deg, 5%, 50%, 0.8);
+  padding: 2rem;
+  margin: 4rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background: hsla(244deg, 48%, 50%, 0.8);
+  padding: 2rem;
+}
+
+.content-related {
+  position: fixed;
+  right: 0;
+  top: 15rem;
+}
+
+.random-post {
+  background: hsla(157deg, 26%, 50%, 0.8);
+  padding: 2rem;
+  border: 2px solid #339922;
+  margin: 1rem;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+.random-post h2 {
+  font-size: 2rem;
+}
+
+/*
+  Links
+*/
+a,
+a.link {
+  color: hsl(164deg, 49%, 38%);
+}
+a:visited,
+a.link:visited {
+  color: #174438;
+  font-weight: 700;
+}
+a:hover,
+a.link:hover {
+  color: #5fc8ac;
+  font-weight: 700;
+}
+a:active,
+a.link:active {
+  color: #318a90;
+  font-weight: 700;
+}
+a:focus,
+a.link:focus {
+  color: #5fc8ac;
+  font-weight: 700;
+}
+a--active,
+a.link--active {
+  color: #318a90 !important;
+}
+
+nav {
+  align-self: flex-end;
+}
+
+.navigation-menu {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  list-style: none;
+  padding: 0.5rem;
+  background: hsla(191deg, 5%, 50%, 0.8);
+}
+.navigation-menu .navigation-menu-item {
+  padding: 1rem;
 }
 
 .date {

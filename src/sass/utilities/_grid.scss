@@ -1,0 +1,27 @@
+%bg {
+  background: rgb(0, 132, 186);
+  background: linear-gradient(
+    122deg,
+    rgba(0, 132, 186, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+%shadow {
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+.grid-columns {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  gap: 1em;
+  background: #449933;
+  height: 100vh;
+  // place-items: center;
+}
+
+.content {
+  @extend %bg;
+  @extend %shadow;
+  padding: 1em;
+  margin: 1em;
+}
