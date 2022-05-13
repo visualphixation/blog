@@ -76,6 +76,48 @@ h6 {
   isolation: isolate;
 }
 
+/* palette generators: 
+  https://mycolor.space/?hex=%233A6292&sub=1 
+  http://paletton.com/
+*/
+/* ===========================
+  Screen Sizes
+
+  screens: {
+    sm: '480px',
+    md: '768px',
+    lg: '976px',
+    xl: '1440px',
+  },
+=========================== */
+/* ===========================
+  Font Sizes
+
+  Fluid Typography Scale
+
+  https://www.fluid-type-scale.com/calculate?minFontSize=16&minWidth=320&minRatio=1.25&maxFontSize=16&maxWidth=1280&maxRatio=1.333&steps=xs%2Csm%2Cbase%2Cmd%2Clg%2Cxl%2Cxxl%2Cxxxl&baseStep=base&prefix=font-size&decimals=2&useRems=on&previewFont=Inter
+
+--font-size-xs: clamp(0.64rem, -0.13vw + 0.67rem, 0.56rem);
+--font-size-sm: clamp(0.8rem, -0.08vw + 0.82rem, 0.75rem);
+--font-size-base: clamp(1rem, 0vw + 1rem, 1rem);
+--font-size-md: clamp(1.25rem, 0.14vw + 1.22rem, 1.33rem);
+--font-size-lg: clamp(1.56rem, 0.36vw + 1.49rem, 1.78rem);
+--font-size-xl: clamp(1.95rem, 0.69vw + 1.81rem, 2.37rem);
+--font-size-xxl: clamp(2.44rem, 1.19vw + 2.2rem, 3.16rem);
+--font-size-xxxl: clamp(3.05rem, 1.93vw + 2.67rem, 4.21rem);
+
+=========================== */
+/* 
+    Center vertically
+
+    Pass nothing, simply include.layout
+
+    Usage:
+
+    .box {
+        @include center-vertically;
+    }
+*/
 @font-face {
   font-family: "Atkinson-Regular";
   src: url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.svg#Atkinson-Regular") format("svg");
@@ -92,83 +134,6 @@ h6 {
   font-family: "Atkinson-Italic";
   src: url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.svg#Atkinson-Italic") format("svg");
 }
-/* 
-    Fluid Type Scale
-
-    Learn more about what's going on here:
-    @link https://moderncss.dev/generating-font-size-css-rules-and-creating-a-fluid-type-scale/
-
-    Select a ratio to preview
-    Default is "perfectFourth"
-*/
-body {
-  font-family: "Atkinson-Regular", sans-serif;
-}
-
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  font-family: "Atkinson-Bold", sans-serif;
-}
-
-h1,
-.h1 {
-  font-size: 5rem;
-}
-
-h2,
-.h2 {
-  font-size: 4rem;
-}
-
-h3,
-.h3 {
-  font-size: 3rem;
-}
-
-h4,
-.h4 {
-  font-size: 2rem;
-}
-
-h5,
-.h5 {
-  font-size: 1rem;
-}
-
-h6,
-.h6 {
-  font-size: 0.75rem;
-}
-
-.fluid {
-  font-size: clamp(1rem, 2vw + 1rem, 2.25rem);
-}
-
-/* palette generators: 
-  https://mycolor.space/?hex=%233A6292&sub=1 
-  http://paletton.com/
-*/
-/* 
-    Center vertically
-
-    Pass nothing, simply include.layout
-
-    Usage:
-
-    .box {
-        @include center-vertically;
-    }
-*/
 /* Border Effect */
 .border-effect {
   padding: 1rem;
@@ -235,11 +200,70 @@ h6,
   Look at Josh Comeau shadowy things
   https://www.joshwcomeau.com/css/designing-shadows/
 */
+/* 
+    Fluid Type Scale
+
+    Learn more about what's going on here:
+    @link https://moderncss.dev/generating-font-size-css-rules-and-creating-a-fluid-type-scale/
+
+    Select a ratio to preview
+    Default is "perfectFourth"
+*/
+body {
+  font-family: "Atkinson-Regular", sans-serif;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: "Atkinson-Bold", sans-serif;
+}
+
+h1,
+.h1 {
+  font-size: clamp(2.44rem, 1.19vw + 2.2rem, 3.16rem);
+}
+
+h2,
+.h2 {
+  font-size: clamp(1.95rem, 0.69vw + 1.81rem, 2.37rem);
+}
+
+h3,
+.h3 {
+  font-size: clamp(1.56rem, 0.36vw + 1.49rem, 1.78rem);
+}
+
+h4,
+.h4 {
+  font-size: clamp(1.25rem, 0.14vw + 1.22rem, 1.33rem);
+}
+
+h5,
+.h5 {
+  font-size: clamp(1rem, 0vw + 1rem, 1rem);
+}
+
+h6,
+.h6 {
+  font-size: clamp(0.8rem, -0.08vw + 0.82rem, 0.75rem);
+}
+
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(45deg, hsl(217deg, 86%, 36%) 0%, hsl(233deg, 86%, 37%) 9%, hsl(249deg, 87%, 38%) 18%, hsl(266deg, 88%, 40%) 27%, hsl(282deg, 89%, 41%) 36%, hsl(298deg, 89%, 42%) 45%, hsl(314deg, 90%, 44%) 55%, hsl(330deg, 90%, 45%) 64%, hsl(347deg, 91%, 46%) 73%, hsl(3deg, 92%, 47%) 82%, hsl(19deg, 92%, 49%) 91%, hsl(35deg, 93%, 50%) 100%);
+  font-size: clamp(1rem, 0vw + 1rem, 1rem);
 }
 
 header {

@@ -1,3 +1,4 @@
+@use "../config";
 /* 
     Fluid Type Scale
 
@@ -29,29 +30,25 @@ h6,
 
 h1,
 .h1 {
-  font-size: 5rem;
+  font-size: map-get(config.$font-sizes, font-size-xxl);
 }
 h2,
 .h2 {
-  font-size: 4rem;
+  font-size: map-get(config.$font-sizes, font-size-xl);
 }
 h3,
 .h3 {
-  font-size: 3rem;
+  font-size: map-get(config.$font-sizes, font-size-lg);
 }
 h4,
 .h4 {
-  font-size: 2rem;
+  font-size: map-get(config.$font-sizes, font-size-md);
 }
 h5,
 .h5 {
-  font-size: 1rem;
+  font-size: map-get(config.$font-sizes, font-size-base);
 }
 h6,
 .h6 {
-  font-size: 0.75rem;
-}
-
-.fluid {
-  font-size: clamp(1rem, 2vw + 1rem, 2.25rem);
+  font-size: map-get(config.$font-sizes, font-size-sm);
 }

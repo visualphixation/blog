@@ -1,10 +1,9 @@
 @forward "../base/reset";
-@forward "../base/fonts";
-@forward "../base/typography";
 @forward "../variables/colors";
 @forward "../variables/sizes";
 @forward "../mixins/mixin-center-vertical";
 @forward "../mixins/links";
+@forward "../base/fonts";
 @forward "../utilities/border-effects";
 @forward "../utilities/focus-styles";
 @forward "../utilities/grid";

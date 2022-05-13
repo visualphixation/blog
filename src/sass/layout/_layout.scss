@@ -19,6 +19,7 @@ body {
     hsl(19deg 92% 49%) 91%,
     hsl(35deg 93% 50%) 100%
   );
+  font-size: map-get(config.$font-sizes, font-size-base);
 }
 
 header {
