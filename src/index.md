@@ -8,7 +8,7 @@ templateEngineOverride: njk,md
 
 ## Welcome to the homepage
 
-### A third level heading looks like me
+### 11ty is pretty cool
 
 #### And a fourth level
 
