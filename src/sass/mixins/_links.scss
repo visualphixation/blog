@@ -1,5 +1,6 @@
 @mixin linx($link, $visit, $hover, $active, $focus) {
   color: $link;
+  transition: all 0.3s ease;
   &:visited {
     color: $visit;
     font-weight: 700;

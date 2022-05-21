@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,8 +7,8 @@
     <title>{{ title }}</title>
   </head>
   <body>
-    {% include 'skip-nav.njk' %}
     <header>
+      {% include 'skip-nav.njk' %}
       <div class="logo">
         {% include 'logo.njk' %}
       </div>
@@ -18,7 +18,7 @@
       <h1>{{ title }}</h1>
       {{ content | safe }}
     </main>
-    <aside class="content-related">
+    <aside aria-label="related content section" class="content-related">
       {% include 'random-post.njk' %}
     </aside>
     {% include 'footer.njk' %}

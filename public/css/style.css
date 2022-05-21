@@ -143,25 +143,6 @@ h6 {
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
 }
 
-/* 
-
-  https://www.sarasoueidan.com/blog/focus-indicators/
-
-  https://github.com/WICG/focus-visible
-
-*/
-:focus-visible {
-  /* Default. Will be removed in Forced Color Modes */
-  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.1);
-  /* Fallback. Will be visible with custom system colors in Forced Color Modes */
-  outline: 1px solid hsl(38deg, 100%, 50%);
-  padding: 0.4rem;
-  transition: all 0.2s ease;
-  transform: rotate(360deg);
-  background: hsl(200deg, 100%, 50%);
-  color: white;
-}
-
 .content {
   background: rgb(0, 132, 186);
   background: linear-gradient(122deg, rgb(0, 132, 186) 0%, rgb(255, 255, 255) 100%);
@@ -296,47 +277,37 @@ footer {
   top: 15rem;
 }
 
-.random-post {
-  background: hsla(157deg, 26%, 50%, 0.8);
-  padding: 2rem;
-  border: 2px solid #339922;
-  margin: 1rem;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
-}
-.random-post h2 {
-  font-size: 2rem;
-}
-
 /*
   Links
 */
 a,
 a.link {
-  color: hsl(164deg, 49%, 38%);
+  color: hsl(47deg, 70%, 59%);
+  transition: all 0.3s ease;
 }
 a:visited,
 a.link:visited {
-  color: #174438;
+  color: #a98b1e;
   font-weight: 700;
 }
 a:hover,
 a.link:hover {
-  color: #5fc8ac;
+  color: #efdfa4;
   font-weight: 700;
 }
 a:active,
 a.link:active {
-  color: #318a90;
+  color: #cfe04d;
   font-weight: 700;
 }
 a:focus,
 a.link:focus {
-  color: #5fc8ac;
+  color: #efdfa4;
   font-weight: 700;
 }
 a--active,
 a.link--active {
-  color: #318a90 !important;
+  color: #cfe04d !important;
 }
 
 nav {
@@ -349,10 +320,43 @@ nav {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   list-style: none;
   padding: 0.5rem;
-  background: hsla(191deg, 5%, 50%, 0.8);
+  background: hsl(21deg, 80%, 34%);
 }
 .navigation-menu .navigation-menu-item {
   padding: 1rem;
+}
+
+/* Button */
+.button {
+  position: relative;
+  margin: 1rem;
+}
+.button:hover {
+  background: #fff;
+  color: #adb5bd;
+  box-shadow: inset 1px 1px 3px #c8d0e7, inset -1px -1px 3px #fff;
+}
+.button:focus::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -2px;
+  border-radius: 2px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 4px #009de6;
+}
+
+.random-post {
+  background: hsl(247deg, 41%, 69%);
+  padding: 2rem;
+  border: 2px solid #339922;
+  margin: 1rem;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+.random-post h2 {
+  font-size: 2rem;
 }
 
 .date {

@@ -40,7 +40,7 @@ $brand-contrast-3: hsla(22, 67%, 47%, 1); // #c86127;
 $brand-contrast-4: hsla(21, 80%, 34%, 1); // #9d4311;
 
 // Link colors
-$link-base: $brand-tertiary-0;
+$link-base: $brand-accent-1;
 $visited: darken($link-base, 20%);
 $hover: lighten($link-base, 20%);
 $active: adjust-hue($link-base, 20deg);

@@ -1,0 +1,32 @@
+/* Button */
+@use "../config";
+
+.button {
+  position: relative;
+  margin: 1rem;
+
+  &:hover {
+    background: #fff;
+    color: #adb5bd;
+    box-shadow: inset 1px 1px 3px #c8d0e7, inset -1px -1px 3px #fff;
+  }
+
+  &:active {
+    // box-shadow: inset 1px 1px 3px #c8d0e7, inset -1px -1px 3px #fff;
+  }
+
+  &:focus {
+    &::after {
+      // to target keyboard only: [data-whatinput="keyboard"]
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      right: -6px;
+      bottom: -2px;
+      border-radius: 2px;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 4px #009de6;
+    }
+  }
+}

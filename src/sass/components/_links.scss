@@ -7,6 +7,7 @@ a,
 a.link {
   @include config.linx(config.$link-base, config.$visited, config.$hover, config.$active, config.$focus);
 
+  // For main navigation active state
   &--active {
     color: config.$active !important;
   }

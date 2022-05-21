@@ -1,3 +1,5 @@
+@use "../config";
+
 nav {
   align-self: flex-end;
 }
@@ -8,7 +10,7 @@ nav {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   list-style: none;
   padding: 0.5rem;
-  background: hsl(191, 5%, 50%, 0.8);
+  background: config.$brand-contrast-4;
 
   .navigation-menu-item {
     padding: 1rem;
