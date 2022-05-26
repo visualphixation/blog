@@ -76,6 +76,22 @@ h6 {
   isolation: isolate;
 }
 
+@font-face {
+  font-family: "Atkinson-Regular";
+  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.svg#Atkinson-Regular") format("svg");
+}
+@font-face {
+  font-family: "Atkinson-Bold";
+  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.svg#Atkinson-Bold") format("svg");
+}
+@font-face {
+  font-family: "Atkinson-BoldItalic";
+  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.svg#Atkinson-BoldItalic") format("svg");
+}
+@font-face {
+  font-family: "Atkinson-Italic";
+  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.svg#Atkinson-Italic") format("svg");
+}
 /* palette generators: 
   https://mycolor.space/?hex=%233A6292&sub=1 
   http://paletton.com/
@@ -118,22 +134,6 @@ h6 {
         @include center-vertically;
     }
 */
-@font-face {
-  font-family: "Atkinson-Regular";
-  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Regular-102.svg#Atkinson-Regular") format("svg");
-}
-@font-face {
-  font-family: "Atkinson-Bold";
-  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Bold-102.svg#Atkinson-Bold") format("svg");
-}
-@font-face {
-  font-family: "Atkinson-BoldItalic";
-  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-BoldItalic-102.svg#Atkinson-BoldItalic") format("svg");
-}
-@font-face {
-  font-family: "Atkinson-Italic";
-  src: url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.eot?") format("eot"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.woff2") format("woff2"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.woff") format("woff"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.ttf") format("truetype"), url("../fonts/Atkinson/Atkinson-Hyperlegible-Italic-102.svg#Atkinson-Italic") format("svg");
-}
 /* Border Effect */
 .border-effect {
   padding: 1rem;
@@ -239,124 +239,33 @@ h6,
   font-size: clamp(0.8rem, -0.08vw + 0.82rem, 0.75rem);
 }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-image: linear-gradient(45deg, hsl(217deg, 86%, 36%) 0%, hsl(233deg, 86%, 37%) 9%, hsl(249deg, 87%, 38%) 18%, hsl(266deg, 88%, 40%) 27%, hsl(282deg, 89%, 41%) 36%, hsl(298deg, 89%, 42%) 45%, hsl(314deg, 90%, 44%) 55%, hsl(330deg, 90%, 45%) 64%, hsl(347deg, 91%, 46%) 73%, hsl(3deg, 92%, 47%) 82%, hsl(19deg, 92%, 49%) 91%, hsl(35deg, 93%, 50%) 100%);
-  font-size: clamp(1rem, 0vw + 1rem, 1rem);
-}
+/* 
+  Layout Grid 
 
-header {
-  background: hsl(213deg, 43%, 40%);
-  padding: 2rem;
-  margin-bottom: 1rem;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-between;
-}
+  https://learncssgrid.com/
 
-main {
-  flex-grow: 1;
-  background: hsla(191deg, 5%, 50%, 0.8);
-  padding: 2rem;
-  margin: 4rem;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  background: hsla(244deg, 48%, 50%, 0.8);
-  padding: 2rem;
-}
-
-.content-related {
-  position: fixed;
-  right: 0;
-  top: 15rem;
-}
-
-/*
-  Links
 */
-a,
-a.link {
-  color: hsl(47deg, 70%, 59%);
-  transition: all 0.3s ease;
-}
-a:visited,
-a.link:visited {
-  color: #a98b1e;
-  font-weight: 700;
-}
-a:hover,
-a.link:hover {
-  color: #efdfa4;
-  font-weight: 700;
-}
-a:active,
-a.link:active {
-  color: #cfe04d;
-  font-weight: 700;
-}
-a:focus,
-a.link:focus {
-  color: #efdfa4;
-  font-weight: 700;
-}
-a--active,
-a.link--active {
-  color: #cfe04d !important;
-}
-
-nav {
-  align-self: flex-end;
-}
-
-.navigation-menu {
+.grid-container {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  list-style: none;
-  padding: 0.5rem;
-  background: hsl(21deg, 80%, 34%);
+  margin: 1rem 0;
+  grid-template-columns: 100%;
 }
-.navigation-menu .navigation-menu-item {
-  padding: 1rem;
-}
-
-/* Button */
-.button {
-  position: relative;
-  margin: 1rem;
-}
-.button:hover {
-  background: #fff;
-  color: #adb5bd;
-  box-shadow: inset 1px 1px 3px #c8d0e7, inset -1px -1px 3px #fff;
-}
-.button:focus::after {
-  content: "";
-  position: absolute;
-  top: -6px;
-  left: -6px;
-  right: -6px;
-  bottom: -2px;
-  border-radius: 2px;
-  border: 2px solid #fff;
-  box-shadow: 0 0 0 4px #009de6;
+@media (min-width: 420px) {
+  .grid-container {
+    grid-template-columns: 1fr minmax(auto, 60%) 1fr;
+  }
 }
 
-.random-post {
-  background: hsl(247deg, 41%, 69%);
-  padding: 2rem;
-  border: 2px solid #339922;
-  margin: 1rem;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+.grid1 {
+  background: #449933;
 }
-.random-post h2 {
-  font-size: 2rem;
+
+.grid2 {
+  background: #123933;
+}
+
+.grid3 {
+  background: #991100;
 }
 
 .date {

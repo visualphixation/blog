@@ -22,6 +22,23 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
   });
 
+  // Universal Shortcodes (Adds to Liquid, Nunjucks, Handlebars)
+  eleventyConfig.addPairedShortcode("user", function (bioContent, name, twitterUsername) {
+    return `<div class="user">
+      <div class="user_name">${name}</div>
+      <div class="user_twitter">@${twitterUsername}</div>
+      <div class="user_bio">${bioContent}</div> 
+    </div>`;
+  });
+  // Universal Shortcodes (Adds to Liquid, Nunjucks, Handlebars)
+  eleventyConfig.addShortcode("caption", function (captionTitle, otherValue) {
+    return `<div class="user">
+<div class="user_name">${captionTitle}</div>
+<div class="user_twitter">${otherValue}</div>
+<div class="user_bio">meh2</div>
+</div>`;
+  });
+
   return {
     dir: {
       input: "src",

@@ -1,0 +1,27 @@
+/* 
+  Layout Grid 
+
+  https://learncssgrid.com/
+
+*/
+
+// grid tests
+.grid-container {
+  // displays as rows by default
+  display: grid;
+  margin: 1rem 0;
+  grid-template-columns: 100%;
+  @media (min-width: 420px) {
+    grid-template-columns: 1fr minmax(auto, 60%) 1fr;
+  }
+}
+
+.grid1 {
+  background: #449933;
+}
+.grid2 {
+  background: #123933;
+}
+.grid3 {
+  background: #991100;
+}

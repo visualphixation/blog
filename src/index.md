@@ -6,15 +6,15 @@ eleventyNavigation:
 templateEngineOverride: njk,md
 ---
 
-## Welcome to the homepage
+## H2 Welcome to the homepage
 
-### 11ty is pretty cool
+### H3 11ty is pretty cool
 
-#### And a fourth level
+#### H4 And a fourth level
 
-##### And I'm the fifth level
+##### H5 And I'm the fifth level
 
-###### Last but not least, I'm the sixth level heading
+###### H6 Last but not least, I'm the sixth level heading
 
 This is the main content section of the homepage.
 
@@ -23,3 +23,9 @@ This should be all content, use nunjucks templates for more declaritive layout s
 Any and all `markdown` can apply here. Seriously, I'm nothing but **markdown**.
 
 You can even use a link [WHUT](www.whut.com)
+
+{% include 'card-test.njk' %}
+
+{% user "Zach Leatherman", "zachleat" %}
+Zach likes to take long walks on Nebraska beaches.
+{% enduser %}
