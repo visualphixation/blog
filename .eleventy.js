@@ -1,6 +1,7 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { DateTime } = require("luxon");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const Card = require('./src/_includes/components/Card');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/sass/");
@@ -22,22 +23,10 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
   });
 
-  // Universal Shortcodes (Adds to Liquid, Nunjucks, Handlebars)
-  eleventyConfig.addPairedShortcode("user", function (bioContent, name, twitterUsername) {
-    return `<div class="user">
-      <div class="user_name">${name}</div>
-      <div class="user_twitter">@${twitterUsername}</div>
-      <div class="user_bio">${bioContent}</div> 
-    </div>`;
-  });
-  // Universal Shortcodes (Adds to Liquid, Nunjucks, Handlebars)
-  eleventyConfig.addShortcode("caption", function (captionTitle, otherValue) {
-    return `<div class="user">
-<div class="user_name">${captionTitle}</div>
-<div class="user_twitter">${otherValue}</div>
-<div class="user_bio">meh2</div>
-</div>`;
-  });
+  /*
+    Cleaner way to handle components with shortcodes
+  */
+  eleventyConfig.addShortcode("Card", Card);
 
   return {
     dir: {

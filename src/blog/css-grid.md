@@ -1,6 +1,7 @@
 ---
 title: "All about CSS Grid"
 date: "2022-05-17"
+templateEngineOverride: njk,md
 ---
 
 <div class="date">{{ page.date | postDate }}</div>
@@ -16,9 +17,15 @@ date: "2022-05-17"
 </article>
 
 <div class="grid-container">
-  <div class="grid1">Grid 1</div>
-  <div class="grid2">Grid 2</div>
-  <div class="grid3">Grid 2</div>
+  <div class="grid1">
+    {% Card title="Hello", link="/home", linkText="go home" %}
+  </div>
+  <div class="grid2">
+    {% Card title="Hello", link="/home", linkText="go home" %}
+  </div>
+  <div class="grid3">
+    {% Card title="Hello", link="/home", linkText="go home" %}
+  </div>
 </div>
 
 <div>

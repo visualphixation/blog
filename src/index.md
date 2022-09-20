@@ -23,9 +23,3 @@ This should be all content, use nunjucks templates for more declaritive layout s
 Any and all `markdown` can apply here. Seriously, I'm nothing but **markdown**.
 
 You can even use a link [WHUT](www.whut.com)
-
-{% include 'card-test.njk' %}
-
-{% user "Zach Leatherman", "zachleat" %}
-Zach likes to take long walks on Nebraska beaches.
-{% enduser %}
